@@ -19,24 +19,6 @@ console.log(base_url, pathArray);
 function loadHTML(file, section) {
 
     const menuHalaman = parseURLParams().get("menu");
-    // const fileList = event.target.files;
-    // let fileContent = file;
-
-    // const fr = new FileReader();
-    // fr.onload = () => {
-    //     fileContent = fr.result;
-    //     console.log('Commands', fileContent);
-    // }
-
-    // const aa = fr.readAsText(fileList[0]);
-    // console.log(aa);
-
-
-    // var fs = require("fs");
-    // fs.readFile(file, function (text) {
-    //     var textByLine = text.split("\n")
-    // });
-    // console.log(textByLine);
 
     //============ AJAX with xhr ============//
     const xhr = new XMLHttpRequest();
@@ -50,7 +32,7 @@ function loadHTML(file, section) {
             console.warn("Failure status code not 200");
         }
     }
-    xhr.open('post', file, true);
+    xhr.open('get', file, true);
     xhr.send();
     //============ End AJAX with xhr ============//
 
