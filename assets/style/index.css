@@ -1,0 +1,40 @@
+.content-headline
+{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:3rem 2rem;
+}
+.content-description
+{
+    padding: 0 2rem;
+}
+.headline-title
+{
+    font-size:2.25rem;
+}
+.headline-button
+{
+    display: block;
+    margin-top:3rem;
+}
+.headline-description
+{
+    margin-top: 0.875rem;
+    font-size:0.875rem;
+}
+
+
+
+
+@media screen and (max-width:820px) {
+    .content-headline
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content-material
+    {
+        margin-top:2rem;
+    }
+}

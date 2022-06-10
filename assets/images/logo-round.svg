@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 170 170">
+  <g id="Group_21" data-name="Group 21" transform="translate(-598 -299)">
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="85" cy="85" r="85" transform="translate(598 299)" fill="#f3f3f3"/>
+    <g id="Group_8" data-name="Group 8" transform="translate(631.132 338.443)">
+      <g id="Group_7" data-name="Group 7" transform="translate(0 0)">
+        <circle id="Ellipse_7" data-name="Ellipse 7" cx="26" cy="26" r="26" transform="translate(-0.132 7.557)" fill="#3413e1"/>
+        <circle id="Ellipse_9" data-name="Ellipse 9" cx="26" cy="26" r="26" transform="translate(51.868 7.557)" fill="#3413e1"/>
+        <circle id="Ellipse_8" data-name="Ellipse 8" cx="17.5" cy="17.5" r="17.5" transform="translate(34.868 34.557)" fill="#f3f3f3"/>
+        <circle id="Ellipse_10" data-name="Ellipse 10" cx="17.5" cy="17.5" r="17.5" transform="translate(34.868 -0.443)" fill="#f3f3f3"/>
+        <circle id="Ellipse_11" data-name="Ellipse 11" cx="8.5" cy="8.5" r="8.5" transform="translate(12.868 25.557)" fill="#f3f3f3"/>
+        <ellipse id="Ellipse_12" data-name="Ellipse 12" cx="9" cy="8.5" rx="9" ry="8.5" transform="translate(73.868 25.557)" fill="#f3f3f3"/>
+      </g>
+      <text id="KULIARI" transform="translate(9.868 88.557)" fill="#3413e1" font-size="22" font-family="Nikkyou-Sans, Nikkyou Sans"><tspan x="0" y="0">KULIARI</tspan></text>
+    </g>
+  </g>
+</svg>
