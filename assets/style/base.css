@@ -528,6 +528,20 @@
     background-color: #F3F3F3;
 }
 
+#onload-page {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #3413E1;
+    z-index: 99999;
+}
+
+
 .material-subject-info {
     display: flex;
     flex-direction: column;
@@ -651,7 +665,7 @@
     box-sizing: border-box;
     margin: 2rem auto -5rem auto;
     z-index: 9;
-    background: url("../images/default-cover.webp") center top;
+    background: url("../images/default-cover.jpg") center top;
     background-size: cover;
 
 }
@@ -781,6 +795,12 @@
 .card-material:hover {
     transition: 0.3s;
     transform: scale(1.1);
+}
+
+.card-material-cover {
+    border-radius: 1rem;
+    background: url("../images/default-cover.jpg") center top;
+    background-size: cover;
 }
 
 .light-mode .card-material-image {

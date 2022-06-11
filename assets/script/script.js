@@ -106,3 +106,12 @@ function addClass(selector, propertyVal) {
 }
 // ============= End Add & Remove Class ambil dari variabel dari setiap elemen pada object queryselectorAll =============//
 
+
+const contentObj = document.getElementById("content");
+const onloadObj = document.getElementById("onload-page");
+
+document.onreadystatechange = function () {
+    if (document.readyState === "complete") {
+        onloadObj.style.display = "none";
+    }
+}
