@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <link rel="icon" href="../assets/images/logo-round.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/style/base.css">
 
     <title>Halaman Kuis</title>
@@ -28,38 +28,50 @@
         <!-- ===================== CONTENT ===================== -->
         <div id="content">
 
-
-            <h1>Kuis Title</h1>
-            <div class="container">
-                <br>
-                <h3 id="question">Question</h3>
-                <br>
-                <div class="input" id="quiz">
-                    <ul>
-                        <li>
-                            <input type="radio" name="answer" id="a" class="answer" />
-                            <label for="a" id="a_text">Answer...</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="answer" id="b" class="answer" />
-                            <label for="b" id="b_text">Answer...</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="answer" id="c" class="answer" />
-                            <label for="c" id="c_text">Answer...</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="answer" id="d" class="answer" />
-                            <label for="d" id="d_text">Answer...</label>
-                        </li>
-                    </ul>
-                    <br>
+            <div class="kuis-card-container">
+                <div class="choose-subject">
+                    <select name="mata-kuliah" id="mata-kuliah">
+                        <option value="struktur-data">Struktur Data</option>
+                        <option value="algoritma-dasar">Algoritma Dasar</option>
+                    </select>
+                    <button id="mulai-kuis" class="button-primary-bg mt-4">Mulai Kuis</button>
                 </div>
+
+                <div id="kuis-mulai-jawab" class="kuis-card hidden">
+                    <div class="container">
+                        <br>
+                        <h3 id="question" class="text-primary-color kuis-question">Question</h3>
+                        <br>
+                        <div class="input" id="quiz">
+                            <ul class="no-bullet">
+                                <li class="text-dark-color">
+                                    <input type="radio" name="answer" id="a" class="answer" />
+                                    <label for="a" id="a_text">Answer...</label>
+                                </li>
+                                <li class="text-dark-color">
+                                    <input type="radio" name="answer" id="b" class="answer" />
+                                    <label for="b" id="b_text">Answer...</label>
+                                </li>
+                                <li class="text-dark-color">
+                                    <input type="radio" name="answer" id="c" class="answer" />
+                                    <label for="c" id="c_text">Answer...</label>
+                                </li>
+                                <li class="text-dark-color">
+                                    <input type="radio" name="answer" id="d" class="answer" />
+                                    <label for="d" id="d_text">Answer...</label>
+                                </li>
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <button id="submit" class="button-primary-bg">Selanjutnya</button>
+                    </div>
+                </div>
+
+
             </div>
-            <div class="input">
-                <br>
-                <button id="submit">Selanjutnya</button>
-            </div>
+
 
 
 

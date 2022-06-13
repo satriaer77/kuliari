@@ -1077,6 +1077,30 @@
     /* margin-bottom: -5rem; */
 }
 
+.kuis-card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.kuis-card {
+    margin: 1rem 0;
+    padding: 2rem;
+    background-color: #FFFDFA;
+    box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 1rem;
+
+}
+
+.kuis-question {
+    font-size: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
 /* ============================== End Content ============================== */
 
 
