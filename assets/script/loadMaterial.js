@@ -1,12 +1,15 @@
 const matkul = paramsUrl.get("mata-kuliah");
 const materi = paramsUrl.get("materi");
-console.log(dataMateri.slice(14230, 14220));
-const jsonObject = JSON.parse(dataMateri);
-const materialObject = jsonObject["mata-kuliah"];
-const authorObject = jsonObject["profil-penulis"];
+// console.log(dataMateri.slice(14230, 14220));
+// const jsonObject = JSON.parse(dataMateri);
+const materialObject = dataMateri["mata-kuliah"];
+const authorObject = dataMateri["profil-penulis"];
 
 if (matkul != null && materi == null) {
     const listMateri = document.getElementById("list-materi");
+    const subjectTitle = document.getElementById("subject-title");
+    console.log(materialObject);
+    subjectTitle.innerHTML = "DAFTAR MATERI " + materialObject[matkul]["judul-mata-kuliah"];
     let getMateri = "";
     // console.log(materialObject[matkul]["materi"]);
 

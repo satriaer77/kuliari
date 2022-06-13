@@ -112,6 +112,7 @@ const onloadObj = document.getElementById("onload-page");
 
 document.onreadystatechange = function () {
     if (document.readyState === "complete") {
-        onloadObj.style.display = "none";
+        // onloadObj.style.display = "none";
+        onloadObj.classList.toggle('fade-out');
     }
 }

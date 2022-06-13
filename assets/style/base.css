@@ -524,8 +524,108 @@
 
 
 /* ============================== Content ============================== */
+.no-bullet {
+    list-style: none;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
 #content {
     background-color: #F3F3F3;
+}
+
+.center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-headline {
+    display: flex;
+    background-image: linear-gradient(to right, #3413E1, #6513E1);
+    height: 50vh;
+}
+
+.card-recommendation {
+    display: inline-block;
+    background-image: linear-gradient(to bottom, #3413E1, #6513E1);
+    padding: 1rem;
+    box-shadow: 1px 2px 5px 3px #0b021752;
+    border-radius: 1rem;
+    max-width: 12rem;
+    margin: 0 1rem;
+}
+
+.card-recommendation-heading {
+    display: block;
+    color: #FFFDFA;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.card-recommendation-title {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.card-recommendation-content {
+    background-color: #F3F3F3;
+    padding: 1rem 0.3rem;
+    border-radius: 1rem;
+}
+
+.card-recommendation-content-title {
+    font-size: 0.825rem;
+    color: #3413E1;
+    font-weight: 700;
+}
+
+.card-recommendation-description {
+    font-size: 0.825rem;
+    color: #0B0217;
+    opacity: 0.7;
+}
+
+.direct-material {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+
+}
+
+::selection {
+    background: #3413E1;
+    color: #0B0217;
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: #3413E1;
+    color: #0B0217;
+    /* Gecko Browsers */
 }
 
 #onload-page {
@@ -539,6 +639,17 @@
     left: 0;
     background-color: #3413E1;
     z-index: 99999;
+}
+
+
+#onload-page img {
+    animation: loader 1s infinite ease-in-out;
+}
+
+#onload-page.fade-out {
+    transition: 1s;
+    opacity: 0;
+    display: none;
 }
 
 
@@ -839,11 +950,131 @@
     font-size: 0.8rem;
     opacity: 0.7;
     margin: 0.5rem 0 1.5rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-material-button {
     width: 100%;
     text-align: center;
+}
+
+.title-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    font-weight: bold;
+    /* margin: 4rem auto; */
+    text-transform: uppercase;
+}
+
+.title-info-primary {
+    /* display: flex; */
+    color: #3413E1;
+}
+
+.title-info-primary::after {
+    content: '';
+    display: inline-block;
+    width: 10%;
+    height: 5px;
+    margin: 0 auto;
+    background-color: #3413E1;
+    border-radius: 1rem;
+}
+
+.title-info-light {
+    /* display: flex; */
+    color: #FFFDFA;
+}
+
+.title-info-light::after {
+    content: '';
+    display: inline-block;
+    width: 10%;
+    height: 5px;
+    margin: 0 auto;
+    background-color: #FFFDFA;
+    border-radius: 1rem;
+}
+
+.app-title {
+    margin: 4rem 0 1rem 0;
+    font-size: 2em;
+}
+
+.app-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 20vw;
+    margin-bottom: 10rem;
+}
+
+.app-detailed-description {
+    font-size: 0.9rem;
+    margin-bottom: 4rem;
+}
+
+.profile-name {
+    font-size: 2em;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 1rem 5rem;
+    margin: 10rem 0;
+    flex-wrap: wrap;
+}
+
+.profile-info-right .profile-description {
+    width: 50%;
+    margin-left: 5rem;
+    display: block;
+}
+
+.profile-info-left .profile-description {
+    width: 50%;
+    margin-right: 5rem;
+    display: block;
+    text-align: right;
+}
+
+.profile-role {
+    display: block;
+    font-size: 1rem;
+}
+
+.profile-detailed-description {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+.profile-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-image::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #3413E1, #6513E1);
+    opacity: 0.5;
+    border-radius: 1.25rem;
+}
+
+.profile-image img {
+    width: 15rem;
+    /* margin-bottom: -5rem; */
 }
 
 /* ============================== End Content ============================== */
