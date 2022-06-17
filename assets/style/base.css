@@ -317,7 +317,6 @@
     padding: 1rem 2rem;
     border: #3413E1 solid 1px;
     border-radius: 1.5rem;
-
 }
 
 .light-mode .button-primary-bg:hover {
@@ -402,18 +401,20 @@
 }
 
 /* ============================== Header ============================== */
-
 #header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    background-color: aqua;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
         "header-main"
         "header-sub-main";
-    position: sticky;
-    top: 0;
     z-index: 10;
 }
+
+/* .header-container {} */
+
 
 .header-logo {
     z-index: 5;
@@ -494,6 +495,26 @@
 
 }
 
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 2.5rem;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.x-icon {
+    cursor: pointer;
+}
+
+.x-icon img {
+    width: 2.5rem;
+    height: auto;
+    box-sizing: border-box;
+}
 
 .header-sub-main {
     grid-area: header-sub-main;
@@ -709,10 +730,12 @@
     border-radius: 1rem;
     margin: 1rem 0;
     line-height: 1.5rem;
+    overflow-wrap: break-word;
 }
 
 .light-mode .content-code {
-    background-color: #0b0217e7;
+    /* background-color: #0b0217e7; */
+    background-color: #e7e7e7;
     color: #8533ff;
 }
 
@@ -1038,6 +1061,11 @@
     display: block;
 }
 
+.profile-info-left {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .profile-info-left .profile-description {
     width: 50%;
     margin-right: 5rem;
@@ -1081,6 +1109,23 @@
     display: flex;
     justify-content: center;
 }
+
+.choose-subject {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0;
+}
+
+.choose-subject select {
+    margin-top: 1rem;
+    border-radius: 1rem;
+    border: 2px solid #3413E1;
+    color: #3413E1;
+    background-color: transparent;
+    padding: 1rem 0.5rem;
+    font-size: 1.5rem;
+}
+
 
 .kuis-card {
     margin: 1rem 0;
@@ -1151,7 +1196,9 @@
     }
 
 
-
+    .button-jelajah {
+        display: none;
+    }
 
     .card-horizontal-container {
         grid-template-rows: 0.4fr 0.6fr;
@@ -1206,6 +1253,116 @@
         margin-right: 1rem;
     }
 
+
+
+    .profile-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1rem 2rem;
+    }
+
+    .profile-info-right .profile-description {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .profile-info-left {
+        display: flex;
+        flex-direction: coloumn;
+    }
+
+    .profile-info-left .profile-description {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .profile-description {
+        margin: 2rem 0;
+    }
+
+}
+
+
+@media screen and (max-width:640px) {
+
+    #header {
+        width: 100%;
+    }
+
+    .header-main {
+        box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.161);
+        justify-content: space-between;
+    }
+
+    .header-sub-main {
+        display: none;
+    }
+
+    .navigation-menu {
+        display: none;
+    }
+
+    .menu-mobile {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, #3413E1, #6513E1);
+        z-index: 12;
+    }
+
+
+    .menu-mobile-container {
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem 2rem;
+    }
+
+    .menu-mobile-heading {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+    .navigation-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .navigation-mobile nav {
+        margin-bottom: 5vh;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        opacity: 0.7;
+    }
+
+
+    .navigation-mobile nav:hover {
+        opacity: 1;
+        font-weight: bold;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .enabled {
+        opacity: 1;
+        font-weight: bold;
+        background-color: #8533ff;
+    }
+
+    .enabled::after {
+        content: none;
+    }
+
+
+
+
+
     .footer-container {
         text-align: left;
     }
@@ -1213,4 +1370,5 @@
     .footer-menu {
         justify-content: start;
     }
+
 }

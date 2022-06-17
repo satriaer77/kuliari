@@ -65,6 +65,16 @@ const quizData =
             "e": "(...}",
             "correct": "c",
         },
+
+        {
+            "question": "4. Ini adalah soal nomer empat",
+            "a": "{...}",
+            "b": "[...]",
+            "c": "(...)",
+            "d": "{...]",
+            "e": "(...}",
+            "correct": "c",
+        },
     ]
 
 };
@@ -91,6 +101,7 @@ mulaiQuiz.addEventListener("click", function () {
     const c_text = document.getElementById("c_text");
     const d_text = document.getElementById("d_text");
     const submitButton = document.getElementById("submit");
+    let bns = '';
     let currentQuiz = 0;
     let score = 0;
     const deselectAnswers = () => {
@@ -117,15 +128,25 @@ mulaiQuiz.addEventListener("click", function () {
         const answer = getSelected();
         if (answer) {
             if (answer === quizData[currentSubject][currentQuiz].correct) score++;
+
+            bns += `Soal ${currentQuiz + 1} = ${answer}, Jawaban yang benar ${quizData[currentSubject][currentQuiz]["correct"]}<br>`;
             currentQuiz++;
+
             if (currentQuiz < quizData[currentSubject].length) loadQuiz();
             else {
-                quiz.innerHTML = `  
- <h2 class="text-accent-color mt-4">Jawaban anda ${score}/${quizData[currentSubject].length}</h2>  
- <button class="button-accent-bg mb-4" onclick="history.go(0)">Mulai Lagi</button>  
-`
+                quiz.innerHTML = `  <h2 class="text-accent-color mt-4">Jawaban anda ${score}/${quizData[currentSubject].length} : , dengan Nilai : ${score / quizData[currentSubject].length * 100} <br> ${bns}</h2><button class="button-accent-bg mb-4" onclick="history.go(0)">Mulai Lagi</button> `
             }
         }
     });
 
 });
+
+
+let lst = [3, 5, 4, 2, 234];
+let ll = 0;
+for (let i = 0; i < lst.length; i++) {
+
+    // console.log(lst[i]);
+    ll += lst[i];
+}
+console.log(ll);

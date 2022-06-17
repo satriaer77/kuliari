@@ -26,7 +26,36 @@ function loadHTML(file, section) {
     xhr.onload = function () {
         if (this.status == 200) {
             section.innerHTML = xhr.responseText;
+            const headerSection = document.getElementById("header");
+            const menuIcon = document.getElementById("menu-icon");
+            const crossIcon = document.getElementById("x-icon");
+            const menuMobile = document.getElementById("menu-mobile");
+
             addClass("#" + menuHalaman, "enabled");
+            window.addEventListener("resize", function () {
+                if (menuMobile.classList.contains("hidden")) {
+                    headerSection.style.height = 'fit-content';
+                }
+                else {
+                    if (screen.width >= 680) {
+                        addClass("#menu-mobile", "hidden");
+                        headerSection.style.height = 'fit-content';
+                    }
+                }
+
+            });
+
+
+            menuIcon.addEventListener("click", function () {
+                headerSection.style.height = '100vh';
+                removeClass("#menu-mobile", "hidden");
+            });
+
+            crossIcon.addEventListener("click", function () {
+                headerSection.style.height = 'fit-content';
+                addClass("#menu-mobile", "hidden");
+            });
+
         }
         else {
             console.warn("Failure status code not 200");
