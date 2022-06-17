@@ -108,6 +108,7 @@ function removeClass(selector, propertyVal) {
     const selectorObject = document.querySelectorAll(selector);
     const typeVar = typeof (selectorObject);
     const objSize = Object.keys(selectorObject).length;
+    console.log(selectorObject);
     if (typeVar != "object" || objSize < 1) {
         selectorObject.classList.remove(propertyVal);
     }
@@ -121,8 +122,8 @@ function removeClass(selector, propertyVal) {
 
 function addClass(selector, propertyVal) {
     const selectorObject = document.querySelectorAll(selector);
-    const typeVar = typeof (selectorObject);
-    const objSize = Object.keys(selectorObject).length;
+    const typeVar        = typeof (selectorObject);
+    const objSize        = Object.keys(selectorObject).length;
 
     if (typeVar != "object" || objSize < 1) {
         selectorObject.classList.add(propertyVal);
@@ -144,4 +145,14 @@ document.onreadystatechange = function () {
         // onloadObj.style.display = "none";
         onloadObj.classList.toggle('fade-out');
     }
+}
+
+function countSizeObject(jsObject)
+{
+    total = 0;
+    for(jso in jsObject)
+    {
+        total+=1;
+    }
+    return total;
 }

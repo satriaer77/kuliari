@@ -1133,18 +1133,51 @@
     background-color: #FFFDFA;
     box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.35);
     border-radius: 1rem;
+    width: 70vw;
 
 }
 
 .kuis-question {
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 .hidden {
     display: none;
 }
 
+.light-mode .quiz-section li {
+    border-radius: 1rem;
+    border: 1px #6513E1 solid;
+    margin-bottom: 1rem;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+}
 
+
+.quiz-section input {
+    display: none;
+}
+
+.light-mode .quiz-section li span {
+    color: #6513E1;
+}
+
+.quiz-section .answered {
+    background-color: #6513E1;
+    /* color: #FFFDFA !important; */
+    /* font-weight: bold; */
+
+
+}
+
+.quiz-section .answered span {
+    color: #FFFDFA !important;
+    font-weight: bold;
+}
+
+.answer-lists {
+    margin: 1rem 0;
+}
 
 /* ============================== End Content ============================== */
 
@@ -1372,3 +1405,10 @@
     }
 
 }
+
+
+/* @media screen and (min-width:1536px) {
+    body {
+        padding: 0 2vw;
+    }
+} */

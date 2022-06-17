@@ -86,22 +86,47 @@ else if (matkul == null && materi == null) {
 }
 else if (materi != null) {
 
-    const authorName = document.getElementById("author-name");
-    const authorPhoto = document.getElementById("author-photo");
-    const materialContent = document.getElementById("material-content");
-    const materialTitle = document.getElementById("material-title");
-    const materialSubject = document.getElementById("material-subject");
-    const materialCover = document.getElementById("material-cover-image");
+    const authorName        = document.getElementById("author-name");
+    const authorPhoto       = document.getElementById("author-photo");
+    const materialContent   = document.getElementById("material-content");
+    const materialTitle     = document.getElementById("material-title");
+    const materialSubject   = document.getElementById("material-subject");
+    const materialCover     = document.getElementById("material-cover-image");
+    const materialTotal     = countSizeObject(materialObject[matkul]["materi"])-1;
+    const materialOrder     = materialObject[matkul]["materi"][materi]["urutan"];
+    const nextMaterial      = document.getElementById("next-material");
+    const previousMaterial  = document.getElementById("previous-material");
 
 
     console.log(authorObject);
 
-    authorName.innerHTML = authorObject[materialObject[matkul]["materi"][materi]["penulis"]]["nama"];
-    authorPhoto.src = "../assets/images/" + authorObject[materialObject[matkul]["materi"][materi]["penulis"]]["foto"];
-    materialCover.style.background = "url('../assets/images/materi/" + materialObject[matkul]["materi"][materi]["cover"] + "') top center";
+    authorName.innerHTML                = authorObject[materialObject[matkul]["materi"][materi]["penulis"]]["nama"];
+    authorPhoto.src                     = "../assets/images/" + authorObject[materialObject[matkul]["materi"][materi]["penulis"]]["foto"];
+    materialCover.style.background      = "url('../assets/images/materi/" + materialObject[matkul]["materi"][materi]["cover"] + "') top center";
     materialCover.style.background.size = "cover";
-    materialContent.innerHTML = materialObject[matkul]["materi"][materi]["isi-materi"];
-    materialTitle.innerHTML = materialObject[matkul]["materi"][materi]["judul"];
-    materialSubject.innerHTML = materialObject[matkul]["materi"][materi]["judul-mata-kuliah"];
+    materialContent.innerHTML           = materialObject[matkul]["materi"][materi]["isi-materi"];
+    materialTitle.innerHTML             = materialObject[matkul]["materi"][materi]["judul"];
+    materialSubject.innerHTML           = materialObject[matkul]["materi"][materi]["judul-mata-kuliah"];
+    console.log(materialOrder);
+    console.log(materialTotal);
+
+
+    // if (materi == 0) {
+    //     console.log(materialOrder);
+    //     nextMaterial.href     = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)+1}`;
+    //     removeClass("#next-material", "hidden");
+    // }
+    // else if (materi > 0 && materi < materialTotal) {
+    //     console.log(materi);
+    //     previousMaterial.href = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)-1}`;
+    //     nextMaterial.href     = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)+1}`;
+    //     removeClass("#next-material", "hidden");
+    //     removeClass("#previous-material", "hidden");
+    // }
+    // else if (materi >= materialTotal) {
+    //     console.log(materialOrder);
+    //     previousMaterial.href = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)-1}`;
+    //     removeClass("#previous-material", "hidden");
+    // }
 
 }

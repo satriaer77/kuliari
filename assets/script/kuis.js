@@ -12,11 +12,11 @@ const quizData =
         },
         {
             "question": "Selection Sort Merupakan pengurutan yang ...",
-            "a": "a.dilakukan dengan cara membagi data menjadi dua buah bagian, dan proses pengurutan terjadi pada proses merging/combine.",
-            "b": "b.dikenal sebagai algoritma pengurutan yang membutuhkan waktu paling lama, hanya saja algoritma ini adalah algoritma pengurutan yang paling sederhana.",
-            "c": "c.menggabungkan data-data yang sudah terbagi pada Tahap pertama. Proses merge ini juga melibatkan proses membandingkan data antara list yang akan digabung.",
-            "d": "d.diasumsikan bahwa sebagian data sudah dalam keadaan terurut sehingga data berikutnya akan dibandingkan dengan data yang sudah dalam keadaan terurut ini, dan disisipkan pada bagian data yang sudah terurut tersebut.",
-            "e": "e.tidak akan melakukan dua proses ini (perbandingan dan pertukaran) pada satu waktu, akan tetapi, pada algoritma selection sort, akan dicari data yang memenuhi syarat terlebih dahulu.",
+            "a": "Dilakukan dengan cara membagi data menjadi dua buah bagian, dan proses pengurutan terjadi pada proses merging/combine.",
+            "b": "Dikenal sebagai algoritma pengurutan yang membutuhkan waktu paling lama, hanya saja algoritma ini adalah algoritma pengurutan yang paling sederhana.",
+            "c": "Menggabungkan data-data yang sudah terbagi pada Tahap pertama. Proses merge ini juga melibatkan proses membandingkan data antara list yang akan digabung.",
+            "d": "Diasumsikan bahwa sebagian data sudah dalam keadaan terurut sehingga data berikutnya akan dibandingkan dengan data yang sudah dalam keadaan terurut ini, dan disisipkan pada bagian data yang sudah terurut tersebut.",
+            "e": "Tidak akan melakukan dua proses ini (perbandingan dan pertukaran) pada satu waktu, akan tetapi, pada algoritma selection sort, akan dicari data yang memenuhi syarat terlebih dahulu.",
             "correct": "e",
         },
         {
@@ -125,16 +125,26 @@ mulaiQuiz.addEventListener("click", function () {
     };
     loadQuiz();
     submitButton.addEventListener("click", () => {
+
         const answer = getSelected();
         if (answer) {
+
             if (answer === quizData[currentSubject][currentQuiz].correct) score++;
 
             bns += `Soal ${currentQuiz + 1} = ${answer}, Jawaban yang benar ${quizData[currentSubject][currentQuiz]["correct"]}<br>`;
             currentQuiz++;
 
-            if (currentQuiz < quizData[currentSubject].length) loadQuiz();
+            if (currentQuiz < quizData[currentSubject].length) {
+                loadQuiz();
+                highlightAnswer("answer", true);
+            }
+
             else {
-                quiz.innerHTML = `  <h2 class="text-accent-color mt-4">Jawaban anda ${score}/${quizData[currentSubject].length} : , dengan Nilai : ${score / quizData[currentSubject].length * 100} <br> ${bns}</h2><button class="button-accent-bg mb-4" onclick="history.go(0)">Mulai Lagi</button> `
+                quiz.innerHTML = `  
+                <span class="text-accent-color mt-4">Jawaban anda ${score}/${quizData[currentSubject].length} : , dengan 
+                Nilai : ${score / quizData[currentSubject].length * 100} <br> ${bns}</span>
+                <button class="button-accent-bg mb-4" onclick="history.go(0)">Mulai Lagi</button>`;
+                question.innerHTML = "";
             }
         }
     });
@@ -150,3 +160,27 @@ for (let i = 0; i < lst.length; i++) {
     ll += lst[i];
 }
 console.log(ll);
+const quizClick = document.getElementById("quiz");
+
+console.log(quizClick);
+quizClick.addEventListener("click", function () {
+    highlightAnswer("answer", false);
+});
+
+function highlightAnswer(inputName, cond) {
+    const getAnswer = document.getElementsByName(inputName);
+    console.log(getAnswer);
+    let answeredElement = null;
+    for (let i = 0; i < getAnswer.length; i++) {
+        getAnswer[i].parentElement.classList.remove("answered");
+        if (getAnswer[i].checked) {
+            getAnswer[i].parentElement.classList.add("answered");
+            console.log(getAnswer[i]);
+            // break;
+        }
+        if (cond) {
+            getAnswer[i].parentElement.classList.remove("answered");
+            getAnswer[i].checked = false;
+        }
+    }
+}

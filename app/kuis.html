@@ -39,30 +39,38 @@
 
                 <div id="kuis-mulai-jawab" class="kuis-card hidden">
                     <div class="container">
-                        <br>
                         <h3 id="question" class="text-primary-color kuis-question">Question</h3>
-                        <br>
-                        <div class="input" id="quiz">
-                            <ul class="no-bullet">
-                                <li class="text-dark-color">
-                                    <input type="radio" name="answer" id="a" class="answer" />
-                                    <label for="a" id="a_text">Answer...</label>
-                                </li>
-                                <li class="text-dark-color">
-                                    <input type="radio" name="answer" id="b" class="answer" />
-                                    <label for="b" id="b_text">Answer...</label>
-                                </li>
-                                <li class="text-dark-color">
-                                    <input type="radio" name="answer" id="c" class="answer" />
-                                    <label for="c" id="c_text">Answer...</label>
-                                </li>
-                                <li class="text-dark-color">
-                                    <input type="radio" name="answer" id="d" class="answer" />
-                                    <label for="d" id="d_text">Answer...</label>
-                                </li>
+                        <div class="answer-lists" id="quiz">
+                            <ul class="no-bullet quiz-section">
+                                <label for="a">
+                                    <li class="quiz-answer">
+                                        <input type="radio" name="answer" id="a" class="answer" />
+                                        <span id="a_text">Answer...</span>
+                                    </li>
+                                </label>
+                                <label for="b">
+                                    <li class="quiz-answer">
+                                        <input type="radio" name="answer" id="b" class="answer" />
+                                        <span id="b_text">Answer...</span>
+                                    </li>
+                                </label>
+                                <label for="c">
+                                    <li class="quiz-answer">
+                                        <input type="radio" name="answer" id="c" class="answer" />
+                                        <span id="c_text">Answer...</span>
+                                    </li>
+                                </label>
+                                <label for="d">
+                                    <li class="quiz-answer">
+                                        <input type="radio" name="answer" id="d" class="answer" />
+                                        <span id="d_text">Answer...</span>
+                                    </li>
+                                </label>
                             </ul>
                             <br>
                         </div>
+
+
                     </div>
                     <div class="input">
                         <button id="submit" class="button-primary-bg">Selanjutnya</button>
