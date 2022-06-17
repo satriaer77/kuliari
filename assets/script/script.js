@@ -5,13 +5,18 @@ var host = window.location.host;
 // stackoverflow.com
 
 var pathArray = window.location.pathname.split("/");
-pathArray.unshift(base_url);
+console.log(pathArray);
+pathArray[0] = base_url 
+// pathArray.unshift(base_url);
 pathArray.pop();
 let url = "";
 
 
-for (pathName of pathArray) {
+for (pathName of pathArray) 
+{
+    console.log(pathName !== "");
     url += pathName + "/";
+
 }
 console.log(url);
 console.log(base_url, pathArray);
@@ -25,11 +30,11 @@ function loadHTML(file, section) {
 
     xhr.onload = function () {
         if (this.status == 200) {
-            section.innerHTML = xhr.responseText;
+            section.innerHTML   = xhr.responseText;
             const headerSection = document.getElementById("header");
-            const menuIcon = document.getElementById("menu-icon");
-            const crossIcon = document.getElementById("x-icon");
-            const menuMobile = document.getElementById("menu-mobile");
+            const menuIcon      = document.getElementById("menu-icon");
+            const crossIcon     = document.getElementById("x-icon");
+            const menuMobile    = document.getElementById("menu-mobile");
 
             addClass("#" + menuHalaman, "enabled");
             window.addEventListener("resize", function () {

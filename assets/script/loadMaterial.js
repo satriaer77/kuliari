@@ -98,7 +98,6 @@ else if (materi != null) {
     const previousMaterial  = document.getElementById("previous-material");
 
 
-    console.log(authorObject);
 
     authorName.innerHTML                = authorObject[materialObject[matkul]["materi"][materi]["penulis"]]["nama"];
     authorPhoto.src                     = "../assets/images/" + authorObject[materialObject[matkul]["materi"][materi]["penulis"]]["foto"];
@@ -107,26 +106,22 @@ else if (materi != null) {
     materialContent.innerHTML           = materialObject[matkul]["materi"][materi]["isi-materi"];
     materialTitle.innerHTML             = materialObject[matkul]["materi"][materi]["judul"];
     materialSubject.innerHTML           = materialObject[matkul]["materi"][materi]["judul-mata-kuliah"];
-    console.log(materialOrder);
-    console.log(materialTotal);
+    
 
 
-    // if (materi == 0) {
-    //     console.log(materialOrder);
-    //     nextMaterial.href     = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)+1}`;
-    //     removeClass("#next-material", "hidden");
-    // }
-    // else if (materi > 0 && materi < materialTotal) {
-    //     console.log(materi);
-    //     previousMaterial.href = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)-1}`;
-    //     nextMaterial.href     = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)+1}`;
-    //     removeClass("#next-material", "hidden");
-    //     removeClass("#previous-material", "hidden");
-    // }
-    // else if (materi >= materialTotal) {
-    //     console.log(materialOrder);
-    //     previousMaterial.href = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)-1}`;
-    //     removeClass("#previous-material", "hidden");
-    // }
+    if (materi == 0) {
+        nextMaterial.href     = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)+1}`;
+        removeClass("#next-material", "hidden");
+    }
+    else if (materi > 0 && materi < materialTotal) {
+        previousMaterial.href = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)-1}`;
+        nextMaterial.href     = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)+1}`;
+        removeClass("#next-material", "hidden");
+        removeClass("#previous-material", "hidden");
+    }
+    else if (materi >= materialTotal) {
+        previousMaterial.href = url+`baca-materi.html?menu=materi&mata-kuliah=${matkul}&materi=${Number(materi)-1}`;
+        removeClass("#previous-material", "hidden");
+    }
 
 }

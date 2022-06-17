@@ -650,7 +650,7 @@
 }
 
 #onload-page {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -828,6 +828,12 @@
 }
 
 .material-content {
+    padding: 2rem 10vw;
+}
+
+.material-control {
+    display: flex;
+    justify-content: space-between;
     padding: 2rem 10vw;
 }
 
