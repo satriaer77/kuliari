@@ -21,13 +21,17 @@
     <div id="container" class="container light-mode text-montserrat">
 
         <!-- ===================== HEADER ===================== -->
-        <div id="header"></div>
+        <section id="header"></section>
         <!-- ===================== END HEADER ===================== -->
 
         <!-- ===================== CONTENT ===================== -->
-        <div id="content">
+        <section id="content">
+
+
+            <!-- ===================== CONTENT HEADLINE ===================== -->
             <div class="content-headline bg-gradient-color">
 
+                <!-- ===================== KULIARI DESCRIPTION ===================== -->
                 <div class="content-description">
                     <div class="headline-title text-light-color text-bold">KULIARI EDUCATION</div>
                     <p class="headline-description text-light-color opacity70">
@@ -43,7 +47,11 @@
                             Jelajah</a>
                     </div>
                 </div>
+                <!-- ===================== END KULIARI DESCRIPTION ===================== -->
 
+
+
+                <!-- ===================== MATERIAL RECOMMENDATION ===================== -->
                 <div class="content-material-container">
                     <div class="content-material">
 
@@ -106,13 +114,17 @@
 
                     </div>
                 </div>
-
+                <!-- ===================== END MATERIAL RECOMMENDATION ===================== -->
 
             </div>
+            <!-- ===================== END CONTENT HEADLINE ===================== -->
 
 
+
+            <!-- ===================== DAFTAR MATERI PALING BANYAK DIBACA ===================== -->
             <div class="list-material mb-4">
                 <span class="title-info title-info-primary mt-4" align="center">MATERI PALING BANYAK DIBACA</span>
+
                 <div class="content-container">
                     <div class="content-material corner-round bg-gradient-color">
                         <div id="list-materi" class="content-list-material">
@@ -120,23 +132,50 @@
                             <div class="card-material">
                                 <div class="container-card-material">
                                     <div class="card-material-cover">
-                                        <div class="card-material-image"></div>
+                                        <div class="card-material-image"
+                                            style="background:url('../assets/images/materi/struktur-data_struktur-data-stack_cover.jpg') no-repeat center;background-size:cover;">
+                                        </div>
                                     </div>
+
                                     <div class="card-material-info">
                                         <span class="card-material-subject">Struktur Data</span>
-                                        <span class="card-material-title">Struktur Data Queue</span>
-                                        <p class="card-material-description">
-                                            Queue atau Antrian merupakan struktur data yang bisa direpresentasikan
-                                            secara kontigu maupun dengan pointer. Struktur data ini menganut prinsip
-                                            FIFO (First-In-First-Out / Masuk Pertama Keluar Pertama), sama seperti
-                                            antrian pada dunia nyata.
+                                        <span class="card-material-title">Stack</span>
+                                        <p class="card-material-description">Stacks adalah satu struktur data dimana
+                                            penambahan dan penghapusan data, hanya dapat dilakukan pada satu ujung yang
+                                            sama, atau yang biasa dikenal dengan istilah top. Semakin data jauh berada
+                                            dari posisi top, maka data tersebut diindikasikan berada di stack lebih lama
+                                            dibandingkan dengan data yang berada dekat pada data di posisi top.
                                         </p>
-                                        <a href="baca-materi.html?menu=materi&mata-kuliah=struktur-data&materi=struktur-data-stack"
+                                        <a href="baca-materi.html?menu=materi&amp;mata-kuliah=struktur-data&amp;materi=0"
                                             class="card-material-button display-inline-block text-nodecoration">
                                             <div class="button-primary-bg">Baca Materi</div>
                                         </a>
                                     </div>
+                                </div>
+                            </div>
 
+                            <div class="card-material">
+                                <div class="container-card-material">
+                                    <div class="card-material-cover">
+                                        <div class="card-material-image"
+                                            style="background:url('../assets/images/materi/struktur-data_struktur-data-deques_cover.jpg') no-repeat center;background-size:cover;">
+                                        </div>
+                                    </div>
+
+                                    <div class="card-material-info">
+                                        <span class="card-material-subject">Struktur Data</span>
+                                        <span class="card-material-title">Deques</span>
+                                        <p class="card-material-description">Struktur data yang ketiga adalah Deques.
+                                            Jika pada stacks, penambahan data baru dan penghapusan dilakukan pada ujung
+                                            yang sama, yaitu top, sedangkan pada queues, penambahan data baru dan
+                                            penghapusan dilakukan pada ujung yang berbeda, yaitu rear(penambahan data)
+                                            dan front(penghapusan data).
+                                        </p>
+                                        <a href="baca-materi.html?menu=materi&amp;mata-kuliah=struktur-data&amp;materi=2"
+                                            class="card-material-button display-inline-block text-nodecoration">
+                                            <div class="button-primary-bg">Baca Materi</div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -144,61 +183,38 @@
                             <div class="card-material">
                                 <div class="container-card-material">
                                     <div class="card-material-cover">
-                                        <div class="card-material-image"></div>
+                                        <div class="card-material-image"
+                                            style="background:url('../assets/images/materi/struktur-data_struktur-data-insertionsort_cover.jpg') no-repeat center;background-size:cover;">
+                                        </div>
                                     </div>
+
                                     <div class="card-material-info">
                                         <span class="card-material-subject">Struktur Data</span>
-                                        <span class="card-material-title">Struktur Data Queue</span>
-                                        <p class="card-material-description">
-                                            Queue atau Antrian merupakan struktur data yang bisa direpresentasikan
-                                            secara kontigu maupun dengan pointer. Struktur data ini menganut prinsip
-                                            FIFO (First-In-First-Out / Masuk Pertama Keluar Pertama), sama seperti
-                                            antrian pada dunia nyata.
+                                        <span class="card-material-title">Insertion Sort</span>
+                                        <p class="card-material-description">Pada algoritma insertion sort, diasumsikan
+                                            bahwa sebagian data sudah dalam keadaan terurut, sehingga data berikutnya
+                                            akan dibandingkan dengan data yang sudah dalam keadaan terurut ini, dan
+                                            disisipkan pada bagian data yang sudah terurut tersebut. Dengan konsep
+                                            seperti ini, posisi sebelah kiri dari list data, selalu dalam keadaan
+                                            terurut.
                                         </p>
-                                        <a href="baca-materi.html?menu=materi&mata-kuliah=struktur-data&materi=struktur-data-stack"
+                                        <a href="baca-materi.html?menu=materi&amp;mata-kuliah=struktur-data&amp;materi=6"
                                             class="card-material-button display-inline-block text-nodecoration">
                                             <div class="button-primary-bg">Baca Materi</div>
                                         </a>
                                     </div>
-
                                 </div>
                             </div>
-
-
-                            <div class="card-material">
-                                <div class="container-card-material">
-                                    <div class="card-material-cover">
-                                        <div class="card-material-image"></div>
-                                    </div>
-                                    <div class="card-material-info">
-                                        <span class="card-material-subject">Struktur Data</span>
-                                        <span class="card-material-title">Struktur Data Queue</span>
-                                        <p class="card-material-description">
-                                            Queue atau Antrian merupakan struktur data yang bisa direpresentasikan
-                                            secara kontigu maupun dengan pointer. Struktur data ini menganut prinsip
-                                            FIFO (First-In-First-Out / Masuk Pertama Keluar Pertama), sama seperti
-                                            antrian pada dunia nyata.
-                                        </p>
-                                        <a href="baca-materi.html?menu=materi&mata-kuliah=struktur-data&materi=struktur-data-stack"
-                                            class="card-material-button display-inline-block text-nodecoration">
-                                            <div class="button-primary-bg">Baca Materi</div>
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-
 
                         </div>
-
-
                     </div>
                 </div>
 
             </div>
+            <!-- ===================== END DAFTAR MATERI PALING BANYAK DIBACA ===================== -->
 
+
+            <!-- ===================== DAFTAR MATA KULIAH PALING BANYAK DILIHAT ===================== -->
             <div class="list-subject">
                 <span class="title-info title-info-primary mt-4 mb-4" align="center">MATA KULIAH PALING BANYAK
                     DILIHAT</span>
@@ -207,47 +223,39 @@
 
                     <div class="card-horizontal">
                         <div class="card-horizontal-container">
-
                             <div class="card-horizontal-cover">
                                 <div id="card-image" class="card-horizontal-image bg-accent-color"></div>
                             </div>
 
                             <div class="card-horizontal-info">
                                 <span class="card-horizontal-title">
-                                    Struktur Data
+                                    Card Title
                                 </span>
                                 <p class="card-horizontal-description opacity70">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum
-                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled it to make a type specimen book. It has
-                                    survived not only five centuries, but also the leap into electronic typesetting,
-                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                    Description
                                 </p>
                                 <a href="materi.html?menu=materi&mata-kuliah=struktur-data"
                                     class="text-nodecoration text-bold">
                                     <span class="button-primary-bg display-inline-block"> Lihat Materi</span>
-
                                 </a>
                             </div>
-
                         </div>
                     </div>
 
-
                 </div>
             </div>
+            <!-- ===================== END DAFTAR MATA KULIAH PALING BANYAK DILIHAT ===================== -->
 
-        </div>
+
+        </section>
         <!-- ===================== END CONTENT ===================== -->
 
 
         <!-- ===================== FOOTER ===================== -->
         <div id="footer"></div>
         <!-- ===================== END FOOTER ===================== -->
-        <!-- <script src="https://unpkg.com/@plant/plant@2.4.0/dist/plant.js"></script> -->
+
+
         <script type="text/javascript" src="../assets/script/materi.js"></script>
         <script type="text/javascript" src="../assets/script/script.js"></script>
         <script type="text/javascript" src="../assets/script/loadMaterial.js"></script>

@@ -1,3 +1,4 @@
+/* ============================== End Font Import ============================== */
 /* m-plus-1-code-regular - latin */
 @font-face {
     font-family: 'M PLUS 1 Code';
@@ -159,6 +160,9 @@
     src: url('../fonts/montserrat-v24-latin-900italic.woff2') format('woff2');
     /* Super Modern Browsers */
 }
+/* ============================== End Font Import ============================== */
+
+
 
 * {
     margin: 0;
@@ -168,6 +172,10 @@
 .text-montserrat {
     font-family: 'Montserrat', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+
+
+/* ============================== Scroll Styling ============================== */
 
 /* width */
 ::-webkit-scrollbar {
@@ -197,6 +205,26 @@
     background: #461296;
 }
 
+/* ============================== End Scroll Styling ============================== */
+
+
+/* ============================== Element Select Styling ============================== */
+::selection {
+    background: #3413E1;
+    color: #0B0217;
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: #3413E1;
+    color: #0B0217;
+    /* Gecko Browsers */
+}
+/* ============================== End Element Select Styling ============================== */
+
+
+
+
 /* ============================== Colour ============================== */
 
 .light-mode .bg-primary-color {
@@ -221,6 +249,11 @@
 
 .light-mode .bg-gradient-color {
     background-image: linear-gradient(to right, #3413E1, #6513E1);
+}
+
+.light-mode .bg-gradient-color-50 {
+    background: linear-gradient(to right, #3413E1, #6513E1) no-repeat, transparent;
+    background-size: 100% 50%;
 }
 
 
@@ -387,6 +420,27 @@
     opacity: 0.7;
 }
 
+.display-inline-block {
+    display: inline-block;
+}
+.no-bullet {
+    list-style: none;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+.center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ============================== End Section Styling ============================== */
 
 #container {
@@ -396,9 +450,51 @@
     max-width: 2048px;
 }
 
-.display-inline-block {
-    display: inline-block;
+
+/* ============================== Onload Section Styling ============================== */
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
 }
+
+#onload-page {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #3413E1;
+    z-index: 99999;
+}
+
+
+#onload-page img {
+    animation: loader 1s infinite ease-in-out;
+}
+
+#onload-page.fade-out {
+    transition: 1s;
+    opacity: 0;
+    display: none;
+}
+/* ============================== End Onload Section Styling ============================== */
+
+
+
 
 /* ============================== Header ============================== */
 #header {
@@ -412,8 +508,6 @@
         "header-sub-main";
     z-index: 10;
 }
-
-/* .header-container {} */
 
 
 .header-logo {
@@ -435,6 +529,8 @@
     width: 100%;
 }
 
+
+/* +------ Header Main Section ------+ */
 .header-main {
     grid-area: header-main;
     display: flex;
@@ -487,35 +583,16 @@
 }
 
 
-
 .button-jelajah {
     flex-grow: 3;
     display: flex;
     justify-content: end;
 
 }
+/* +------ End Header Main Section ------+ */
 
-.menu-icon {
-    display: none;
-    cursor: pointer;
-}
 
-.menu-icon img {
-    width: 2.5rem;
-    height: auto;
-    box-sizing: border-box;
-}
-
-.x-icon {
-    cursor: pointer;
-}
-
-.x-icon img {
-    width: 2.5rem;
-    height: auto;
-    box-sizing: border-box;
-}
-
+/* +------ Header Sub Main Section ------+ */
 .header-sub-main {
     grid-area: header-sub-main;
     display: flex;
@@ -537,42 +614,56 @@
 .navigation-sub-menu nav:hover {
     opacity: 0.7;
 }
+/* +------ End Header Sub Main Section ------+ */
 
 
+/* +------ Header Main Section for mobile ------+ */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 2.5rem;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.x-icon {
+    cursor: pointer;
+}
+
+.x-icon img {
+    width: 2.5rem;
+    height: auto;
+    box-sizing: border-box;
+}
+/* +------ End Header Sub Main Section ------+ */
 
 
 /* ============================== End Header ============================== */
 
 
+
+
 /* ============================== Content ============================== */
-.no-bullet {
-    list-style: none;
-}
-
-.mt-4 {
-    margin-top: 4rem;
-}
-
-.mb-4 {
-    margin-bottom: 4rem;
-}
-
 #content {
     background-color: #F3F3F3;
 }
 
-.center-element {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
+/* +------ Headline Content Component ------+ */
 .content-headline {
     display: flex;
     background-image: linear-gradient(to right, #3413E1, #6513E1);
-    height: 50vh;
+    min-height: 50vh;
 }
+/* +------ End Headline Content Component ------+ */
 
+
+
+
+/* +------ Card Reccomendation Component ------+ */
 .card-recommendation {
     display: inline-block;
     background-image: linear-gradient(to bottom, #3413E1, #6513E1);
@@ -620,60 +711,12 @@
     text-align: center;
     margin-top: 1rem;
 }
-
-@keyframes loader {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+/* +------ End Card Reccomendation Component ------+ */
 
 
-}
-
-::selection {
-    background: #3413E1;
-    color: #0B0217;
-    /* WebKit/Blink Browsers */
-}
-
-::-moz-selection {
-    background: #3413E1;
-    color: #0B0217;
-    /* Gecko Browsers */
-}
-
-#onload-page {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #3413E1;
-    z-index: 99999;
-}
 
 
-#onload-page img {
-    animation: loader 1s infinite ease-in-out;
-}
-
-#onload-page.fade-out {
-    transition: 1s;
-    opacity: 0;
-    display: none;
-}
-
-
+/* +------ Read Material Page ------+ */
 .material-subject-info {
     display: flex;
     flex-direction: column;
@@ -689,105 +732,6 @@
     font-size: 2.5em;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.light-mode .content-sub-heading {
-    color: #3413E1;
-    font-size: 2em;
-    font-weight: bold;
-    margin: 2rem 0;
-}
-
-.light-mode .content-paragraph {
-    color: #0B0217;
-    font-size: 1rem;
-    margin: 1rem 0;
-    line-height: 1.6rem;
-}
-
-.content-list-element {
-    font-size: 0.9rem;
-    margin: 1rem 0;
-    line-height: 1.6rem;
-}
-
-.content-list-element ul,
-.content-list-element ol {
-    padding: 0 2rem;
-}
-
-.light-mode .content-list-element {
-    color: #0B0217;
-}
-
-
-.content-code {
-    position: relative;
-    display: block;
-    font-family: 'M PLUS 1 Code', serif;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    margin: 1rem 0;
-    line-height: 1.5rem;
-    overflow-wrap: break-word;
-}
-
-.light-mode .content-code {
-    /* background-color: #0b0217e7; */
-    background-color: #e7e7e7;
-    color: #8533ff;
-}
-
-.light-mode .content-code::before {
-    content: '';
-    position: absolute;
-    background-color: #3413E1;
-    height: 100%;
-    width: 1rem;
-    top: 0;
-    left: 0;
-    color: #6513E1;
-    border-radius: 1rem 0 0 1rem;
-}
-
-
-.content-image {
-    display: block;
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 90%;
-}
-
-.content-heading {
-    padding: 10vh 10vw 0 10vw;
-    margin-bottom: 8rem;
-}
-
-.material-info {
-    display: flex;
-    justify-content: space-between;
-}
-
-.author-profile {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-areas: "author-bio author-photo";
-    justify-content: end;
-    align-items: center;
-    text-align: right;
-}
-
-.author-bio {
-    grid-area: author-bio;
-}
-
-.author-profile img {
-    grid-area: author-photo;
-    margin-left: 1rem;
-    border-radius: 50%;
-    width: 4rem;
-    height: auto;
 }
 
 .material-cover-image-default {
@@ -827,6 +771,107 @@
     display: block;
 }
 
+
+.content-heading {
+    padding: 10vh 10vw 0 10vw;
+    margin-bottom: 8rem;
+}
+
+.material-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author-profile {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "author-bio author-photo";
+    justify-content: end;
+    align-items: center;
+    text-align: right;
+}
+
+.author-bio {
+    grid-area: author-bio;
+}
+
+.author-profile img {
+    grid-area: author-photo;
+    margin-left: 1rem;
+    border-radius: 50%;
+    width: 4rem;
+    height: auto;
+}
+
+
+.light-mode .content-sub-heading {
+    color: #3413E1;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.light-mode .content-paragraph {
+    color: #0B0217;
+    font-size: 1rem;
+    margin: 1rem 0;
+    line-height: 1.6rem;
+}
+
+.content-list-element {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    line-height: 1.6rem;
+}
+
+.content-list-element ul,
+.content-list-element ol {
+    padding: 0 2rem;
+}
+
+.light-mode .content-list-element {
+    color: #0B0217;
+}
+
+.content-code {
+    position: relative;
+    display: block;
+    font-family: 'M PLUS 1 Code', serif;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    line-height: 1.5rem;
+    overflow-wrap: break-word;
+}
+
+.light-mode .content-code {
+    /* background-color: #0b0217e7; */
+    background-color: #e7e7e7;
+    color: #8533ff;
+}
+
+.light-mode .content-code::before {
+    content: '';
+    position: absolute;
+    background-color: #3413E1;
+    height: 100%;
+    width: 1rem;
+    top: 0;
+    left: 0;
+    color: #6513E1;
+    border-radius: 1rem 0 0 1rem;
+}
+
+
+.content-image {
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
 .material-content {
     padding: 2rem 10vw;
 }
@@ -836,6 +881,9 @@
     justify-content: space-between;
     padding: 2rem 10vw;
 }
+/* +------ End Read Material Page ------+ */
+
+
 
 .content-list-subject {
     display: flex;
@@ -845,6 +893,7 @@
 }
 
 
+/* +------ Card Horizontal ------+ */
 .card-horizontal {
     border-radius: 1rem;
     display: inline-block;
@@ -853,11 +902,16 @@
     margin-bottom: 4rem;
 }
 
+
 .light-mode .card-horizontal {
     background-color: #FFFDFA;
     box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.161);
 }
-
+.card-horizontal-container {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-areas: "card-horizontal-image card-horizontal-info";
+}
 
 .card-horizontal-image {
     border-radius: 1rem;
@@ -888,11 +942,9 @@
     color: #0B0217;
 }
 
-.card-horizontal-container {
-    display: grid;
-    grid-template-columns: 0.4fr 0.6fr;
-    grid-template-areas: "card-horizontal-image card-horizontal-info";
-}
+/* +------ End Card Horizontal ------+ */
+
+
 
 .content-container {
     padding: 5rem 1rem;
@@ -904,7 +956,6 @@
 }
 
 .content-list-material {
-    /* background-color: aqua; */
     padding: 4vh 2vw;
     display: flex;
     flex-flow: row wrap;
@@ -1117,16 +1168,25 @@
 }
 
 .choose-subject {
+    /* display: block; */
+    width: 100%;
+}
+
+.choose-subject-container {
+    width: 50%;
     display: flex;
+    margin: 0 auto;
     flex-direction: column;
     padding: 5rem 0;
+    text-align: center;
 }
 
 .choose-subject select {
     margin-top: 1rem;
     border-radius: 1rem;
-    border: 2px solid #3413E1;
-    color: #3413E1;
+    border: 2px solid #FFFDFA;
+    color: #FFFDFA;
+    outline: none;
     background-color: transparent;
     padding: 1rem 0.5rem;
     font-size: 1.5rem;
@@ -1188,6 +1248,8 @@
 /* ============================== End Content ============================== */
 
 
+
+
 /* ============================== Footer ============================== */
 
 .footer-container {
@@ -1219,9 +1281,11 @@
 
 
 
+/* ----============================== Breakpoint Tablet Screen ==============================--- */
 
 @media screen and (max-width:820px) {
 
+	/* ============================== Header ============================== */
     .header-logo-main img {
         display: block;
     }
@@ -1238,6 +1302,11 @@
     .button-jelajah {
         display: none;
     }
+	/* ============================== End Header ============================== */
+
+
+
+	/* ============================== Content ============================== */
 
     .card-horizontal-container {
         grid-template-rows: 0.4fr 0.6fr;
@@ -1321,10 +1390,17 @@
     .profile-description {
         margin: 2rem 0;
     }
+	/* ============================== End Content ============================== */
+
+
 
 }
+/* ----============================== End Breakpoint Tablet Screen ==============================--- */
 
 
+
+
+/* ----============================== Breakpoint Mobile Screen ==============================--- */
 @media screen and (max-width:640px) {
 
     #header {
@@ -1400,6 +1476,9 @@
 
 
 
+    .card-recommendation {
+        display: none;
+    }
 
 
     .footer-container {
@@ -1411,10 +1490,4 @@
     }
 
 }
-
-
-/* @media screen and (min-width:1536px) {
-    body {
-        padding: 0 2vw;
-    }
-} */
+/* ----============================== End Breakpoint Mobile Screen ==============================--- */

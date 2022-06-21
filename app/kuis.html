@@ -20,77 +20,92 @@
     <div id="container" class="container light-mode text-montserrat">
 
         <!-- ===================== HEADER ===================== -->
-        <div id="header"></div>
+        <section id="header"></section>
         <!-- ===================== END HEADER ===================== -->
 
 
 
         <!-- ===================== CONTENT ===================== -->
-        <div id="content">
+        <section id="content">
 
-            <div class="kuis-card-container">
-                <div class="choose-subject">
-                    <select name="mata-kuliah" id="mata-kuliah">
-                        <option value="struktur-data">Struktur Data</option>
-                        <option value="algoritma-dasar">Algoritma Dasar</option>
-                    </select>
-                    <button id="mulai-kuis" class="button-primary-bg mt-4">Mulai Kuis</button>
-                </div>
+            <!-- ===================== KUIS CONTENT BACKGROUND ===================== -->
+            <div class="bg-gradient-color-50">
 
-                <div id="kuis-mulai-jawab" class="kuis-card hidden">
-                    <div class="container">
-                        <h3 id="question" class="text-primary-color kuis-question">Question</h3>
-                        <div class="answer-lists" id="quiz">
-                            <ul class="no-bullet quiz-section">
-                                <label for="a">
-                                    <li class="quiz-answer">
-                                        <input type="radio" name="answer" id="a" class="answer" />
-                                        <span id="a_text">Answer...</span>
-                                    </li>
-                                </label>
-                                <label for="b">
-                                    <li class="quiz-answer">
-                                        <input type="radio" name="answer" id="b" class="answer" />
-                                        <span id="b_text">Answer...</span>
-                                    </li>
-                                </label>
-                                <label for="c">
-                                    <li class="quiz-answer">
-                                        <input type="radio" name="answer" id="c" class="answer" />
-                                        <span id="c_text">Answer...</span>
-                                    </li>
-                                </label>
-                                <label for="d">
-                                    <li class="quiz-answer">
-                                        <input type="radio" name="answer" id="d" class="answer" />
-                                        <span id="d_text">Answer...</span>
-                                    </li>
-                                </label>
-                            </ul>
-                            <br>
+
+                <!-- ===================== CARD KUIS ===================== -->
+                <div class="kuis-card-container">
+
+                    <!-- ===================== PILIH MATERI QUIZ ===================== -->
+                    <div class="choose-subject bg-gradient-color">
+                        <div class="choose-subject-container">
+                            <h1 class="text-light-color">Pilih Materi Quiz</h1>
+                            <select name="mata-kuliah" id="mata-kuliah">
+                                <option class="text-primary-color" value="struktur-data">Struktur Data</option>
+                                <option class="text-primary-color" value="algoritma-dasar">Algoritma Dasar</option>
+                            </select>
+                            <button id="mulai-kuis" class="button-light-bg mt-4">Mulai Kuis</button>
                         </div>
+                    </div>
+                    <!-- ===================== END PILIH MATERI QUIZ ===================== -->
 
 
+                    <!-- ===================== MULAI QUIZ ===================== -->
+                    <div id="kuis-mulai-jawab" class="kuis-card hidden">
+                        <div class="container">
+                            <div id="question" class="text-primary-color kuis-question">Question</div>
+
+                            <div class="answer-lists" id="quiz">
+                                <ul class="no-bullet quiz-section">
+                                    <label for="a">
+                                        <li class="quiz-answer">
+                                            <input type="radio" name="answer" id="a" class="answer" />
+                                            <span id="a_text">Answer...</span>
+                                        </li>
+                                    </label>
+                                    <label for="b">
+                                        <li class="quiz-answer">
+                                            <input type="radio" name="answer" id="b" class="answer" />
+                                            <span id="b_text">Answer...</span>
+                                        </li>
+                                    </label>
+                                    <label for="c">
+                                        <li class="quiz-answer">
+                                            <input type="radio" name="answer" id="c" class="answer" />
+                                            <span id="c_text">Answer...</span>
+                                        </li>
+                                    </label>
+                                    <label for="d">
+                                        <li class="quiz-answer">
+                                            <input type="radio" name="answer" id="d" class="answer" />
+                                            <span id="d_text">Answer...</span>
+                                        </li>
+                                    </label>
+                                </ul>
+                                <br>
+                            </div>
+
+                            <div class="input">
+                                <button id="submit" class="button-primary-bg">Selanjutnya</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="input">
-                        <button id="submit" class="button-primary-bg">Selanjutnya</button>
-                    </div>
+                    <!-- ===================== END MULAI QUIZ ===================== -->
+
                 </div>
-
+                <!-- ===================== END CARD KUIS ===================== -->
 
             </div>
+            <!-- ===================== END KUIS CONTENT BACKGROUND ===================== -->
 
 
-
-
-        </div>
+        </section>
         <!-- ===================== END CONTENT ===================== -->
 
 
 
 
         <!-- ===================== FOOTER ===================== -->
-        <div id="footer"></div>
+        <section id="footer"></section>
         <!-- ===================== END FOOTER ===================== -->
 
         <script type="text/javascript" src="../assets/script/script.js"></script>

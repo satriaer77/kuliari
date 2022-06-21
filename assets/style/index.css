@@ -36,6 +36,12 @@
     .content-headline {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+    }
+
+    .content-description {
+        max-width: 100%;
     }
 
     .content-material {
