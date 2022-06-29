@@ -1,3 +1,3 @@
 # KULIARI
 Website KULIARI (Kuliah Sehari)
-Link Website --> kuliari.rf.gd
+Link Website --> http://www.kuliari.rf.gd
